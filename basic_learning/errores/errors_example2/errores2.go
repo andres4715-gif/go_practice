@@ -1,14 +1,13 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"log"
 )
 	
 func dividir(a, b int ) (result int, err error) {
 	if b == 0 {
-		err = errors.New("Operation is not valid: division by zero")
+		err = fmt.Errorf("The dividend is %d and the divisor value is %d ", a, b)
 		return 0, err
 	}
 	result = a / b
@@ -16,7 +15,10 @@ func dividir(a, b int ) (result int, err error) {
 }
 
 func main() {
-	result, err := dividir(100, 0)
+	dividend := 100
+	divisor := 10
+
+	result, err := dividir(dividend, divisor)
 		if err != nil {
 			log.Fatalf("🚨 No valid operation: %s", err)
 	}
