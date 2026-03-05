@@ -59,16 +59,29 @@ func main() {
 	fmt.Println(myArray)
 
 	// Slice
-	fmt.Println("------------ Slice ------------")
+	fmt.Println("------------ Slice 1 ------------")
 	mySlice := []string{"Angular", "react", "vue", "svelte"}
 	fmt.Println(mySlice[0])
 	fmt.Println(mySlice)
 
 	// Agregar un nuevo elemento al slice
+	fmt.Println("------------ slice  2 ------------")
 	mySlice2 := []string{}
 	mySlice2 = append(mySlice2, "Angular_V2", "svelte_V2", "react_V2", "vue_V2")
 	fmt.Println("The new slice is: ", mySlice2)
 	fmt.Println("The length of the new slice is: ", len(mySlice2))
+
+	// traer solo una parte de los elementos que estan en el slice: 
+	fmt.Println("------------ slice  3 ------------")
+	fmt.Println("✅ mySlice: ", mySlice)
+	frameworklist := mySlice[1:3]
+	fmt.Println("🧵 The fragmented list is: ", frameworklist)
+
+	fmt.Println("------------ slice  4 ------------")
+	mySlice3 := []string{"Carro", "Casa", "Moto"}
+	fmt.Println("✅ mySlice3: ", mySlice3)
+	frameworklist2 := mySlice3[1:]
+	fmt.Println("🧵 The fragmented list is: ", frameworklist2)
 
 	// Saber la cantidad de elementos del array o del slice
 	fmt.Println("------------ len() ------------")
