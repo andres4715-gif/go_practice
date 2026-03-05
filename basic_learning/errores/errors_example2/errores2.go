@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"log"
 )
 	
 func dividir(a, b int ) (result int, err error) {
@@ -15,9 +16,9 @@ func dividir(a, b int ) (result int, err error) {
 }
 
 func main() {
-	result, err := dividir(100, 5)
+	result, err := dividir(100, 0)
 		if err != nil {
-			fmt.Println("No valid operation: ", err)
+			log.Fatalf("🚨 No valid operation: %s", err)
 	}
 	fmt.Println(result)
 }
