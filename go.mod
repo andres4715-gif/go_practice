@@ -5,6 +5,7 @@ go 1.25.3
 require google.golang.org/protobuf v1.36.11
 
 require (
+	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/sirupsen/logrus v1.9.4 // indirect
 	golang.org/x/sys v0.13.0 // indirect
 	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
