@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func cambiarValor(puntero* int) {
+func cambiarValor(puntero *int) {
 	*puntero = 100
 }
 
