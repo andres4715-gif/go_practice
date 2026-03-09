@@ -31,7 +31,6 @@ func main() {
 	fmt.Println(myMap)
 
 	// iterar sobre un mapa: 
-
 	var myMap2 = make(map[string]int)
 	myMap2["four"] = 4
 	myMap2["five"] = 5
@@ -43,7 +42,7 @@ func main() {
 	fmt.Println(myMap2)
 
 	// Como se itera en el map
-	for key, value := range myMap2 {
-		fmt.Printf("key:, %s, Value:, %d\n", key, value)
+	for _, value := range myMap2 {
+		fmt.Print(value)
 	}
 }
