@@ -20,4 +20,4 @@ go mod init github.com/github-user/add-the-repository-name
 After this go will create a go.mod file in the root path to store tools added in the proyect
 
 
-👨🏼‍🚒 GO practice under construction 🚧🦺
+👨🏼‍🚒 GO practice under construction 🚧🦺👋
