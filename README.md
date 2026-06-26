@@ -26,4 +26,4 @@ go fmt ./...
 ```
 
 
-👨🏼‍🚒 GO practice under construction 🚧🦺👋
+👨🏼‍🚒 GO practice under construction 🚧🦺👋✌🏽
