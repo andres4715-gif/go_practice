@@ -19,5 +19,11 @@ go mod init github.com/github-user/add-the-repository-name
 ```
 After this go will create a go.mod file in the root path to store tools added in the proyect
 
+# Indentar
+Para indentar el codigo debes utilizar este comando:
+```bash
+go fmt ./...
+```
+
 
 👨🏼‍🚒 GO practice under construction 🚧🦺👋

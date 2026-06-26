@@ -20,7 +20,7 @@ func Resta(a, b int) (int, error) {
 func main() {
 	totalSuma := Suma(10, 20)
 	fmt.Printf("The final Data is: %d\n", totalSuma)
-	final, myNewError:= Resta(10, 5)
+	final, myNewError := Resta(10, 5)
 	fmt.Print("---", myNewError, "\n")
 	fmt.Print("🎊 The final values is: ", final, "\n")
 
