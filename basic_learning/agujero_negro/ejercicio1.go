@@ -55,7 +55,7 @@ func main() {
 	}
 	fmt.Printf("Carro registrado: %s %s, Precio: $%v\n", myCarro.Marca, myCarro.Modelo, myCarro.Precio)
 
-	_, myNuevaCasaPepito, err := datosCasa("Caldas", "Antioquia", 1000, "apartamento") // <--- APlicando el concepto del agujero negro
+	_, myNuevaCasaPepito, err := datosCasa("Caldas", "Antioquia", 1000, "apartamento") // <--- APlicando el concepto del agujero negro osea la (_) 
 	if err != nil {
 		log.Fatalf("No es posible registrar la casa %s", err)
 	}
