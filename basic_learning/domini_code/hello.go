@@ -50,6 +50,12 @@ func main() {
 	// operadores de comparacion
 	fmt.Println(a <= b)
 	fmt.Println(a >= b)
+	/*
+		Diferencia clave: tamaño fijo vs dinámico.
+		Array ([3]string): tamaño fijo, parte del tipo. [3]string y [4]string son tipos distintos, no puedes cambiar el tamaño.
+		Slice ([]string): tamaño dinámico, puedes usar append para agregar elementos y crece. Por dentro, un slice es un array + referencia (puntero, len, cap).
+		En la práctica casi siempre usas slices; arrays se usan poco.
+	*/
 
 	// Array
 	fmt.Println("------------ Arrays ------------")
@@ -69,7 +75,7 @@ func main() {
 	// Agregar un nuevo elemento al slice
 	fmt.Println("------------ slice  2 ------------")
 	mySlice2 := []string{}
-	mySlice2 = append(mySlice2, "Angular_V2", "svelte_V2", "react_V2", "vue_V2")
+	mySlice2 = append(mySlice2, "Angular_V2", "svelte_V2", "react_V2", "vue_V2", "sonar_v3")
 	fmt.Println("The new slice is: ", mySlice2)
 	fmt.Println("The length of the new slice is: ", len(mySlice2))
 
