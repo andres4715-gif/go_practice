@@ -1,6 +1,11 @@
+# GO PRACTICE 👏
+
 ## How to run a file
 
+Just run: 
 ```bash
+# Example: go run <PATH_AND_FILE_NAME>
+$ go run basic_learning/agujero_negro/ejercicio1.go
 $ go run printing/imprimir.go
 ```
 
