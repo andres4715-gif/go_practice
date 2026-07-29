@@ -6,10 +6,12 @@ import (
 	"strconv"
 )
 
-type employee struct{
-		name string
-		age  int
-		id string}
+type employee struct {
+	name string
+	age  int
+	id   string
+}
+
 func main() {
 	// Declare consts
 	const (
@@ -20,39 +22,39 @@ func main() {
 	// Constantes the expresion
 	const data = PI + RA
 
-	// Print: 
+	// Print:
 	fmt.Println("Hello World 2")
-    fmt.Println("The number of PI: ", PI)
+	fmt.Println("The number of PI: ", PI)
 	fmt.Println("Total of data: ", data)
 
-	// Asignar una variable a otra de otro tipo de string a float64: 
+	// Asignar una variable a otra de otro tipo de string a float64:
 	var age string = "44.4"
-	var finalAge, _ = strconv.ParseFloat(age, 64)	
-    fmt.Println("The final age is: ", finalAge)
+	var finalAge, _ = strconv.ParseFloat(age, 64)
+	fmt.Println("The final age is: ", finalAge)
 	fmt.Println("The typeOf is: ", reflect.TypeOf(finalAge))
 
-	// Asignar una variable a otra de otro tipo cuando son numeros: 
+	// Asignar una variable a otra de otro tipo cuando son numeros:
 	var ageFloat float64 = 44.4
-	var finalAge2 = int(ageFloat)	
-    fmt.Println("The final data is: ", ageFloat)
+	var finalAge2 = int(ageFloat)
+	fmt.Println("The final data is: ", ageFloat)
 	fmt.Println("The typeOf data is: ", reflect.TypeOf(finalAge2))
 
 	// Operadores logicos y relacionales
 	var a int = 10
 	var b int = 20
 
-	fmt.Println(a == b )
-	fmt.Println(a != b )
-	fmt.Println(a > b )
-	fmt.Println(a < b )
-	// operadores de comparacion 
-	fmt.Println(a <= b )
-	fmt.Println(a >= b )
+	fmt.Println(a == b)
+	fmt.Println(a != b)
+	fmt.Println(a > b)
+	fmt.Println(a < b)
+	// operadores de comparacion
+	fmt.Println(a <= b)
+	fmt.Println(a >= b)
 
-	// Array 
+	// Array
 	fmt.Println("------------ Arrays ------------")
 	var myArray [3]string
-	myArray	= [3]string{"Angular", "react", "vue"}
+	myArray = [3]string{"Angular", "react", "vue"}
 	fmt.Println(myArray[0])
 	fmt.Println(myArray)
 	myArray[0] = "AngularJS"
@@ -71,7 +73,7 @@ func main() {
 	fmt.Println("The new slice is: ", mySlice2)
 	fmt.Println("The length of the new slice is: ", len(mySlice2))
 
-	// traer solo una parte de los elementos que estan en el slice: 
+	// traer solo una parte de los elementos que estan en el slice:
 	fmt.Println("------------ slice  3 ------------")
 	fmt.Println("✅ mySlice: ", mySlice)
 	frameworklist := mySlice[1:3]
@@ -114,7 +116,7 @@ func main() {
 	}
 
 	fmt.Println("------------ for example 2 ------------")
-	i :=1 
+	i := 1
 	for i <= 3 {
 		fmt.Println(i)
 		i++

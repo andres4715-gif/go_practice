@@ -2,8 +2,6 @@ package persona
 
 type Humano struct {
 	Nombre string
-	Edad int
+	Edad   int
 	Ciudad string
 }
-
-

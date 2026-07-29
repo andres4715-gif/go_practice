@@ -2,6 +2,6 @@ package despedir
 
 import "fmt"
 
-func Despedir () {
+func Despedir() {
 	fmt.Println("🚨 Despidiendo!!!")
 }

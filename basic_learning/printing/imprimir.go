@@ -1,8 +1,8 @@
 package main
 
 import (
-"fmt"
-) 
+	"fmt"
+)
 
 func main() {
 	// 1. fmt.Print - Imprime sin salto de línea

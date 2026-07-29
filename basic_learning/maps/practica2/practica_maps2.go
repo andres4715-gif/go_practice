@@ -21,7 +21,7 @@ func main() {
 	myMap["three"] = 3
 	fmt.Println(myMap["one"])
 
-	// Como se edita un valor de un map 
+	// Como se edita un valor de un map
 	myMap["three"] = 89
 	fmt.Println(myMap["three"])
 
@@ -30,7 +30,7 @@ func main() {
 	delete(myMap, "three") // El valor de three fue eliminado y ya no se puede acceder
 	fmt.Println(myMap)
 
-	// iterar sobre un mapa: 
+	// iterar sobre un mapa:
 	var myMap2 = make(map[string]int)
 	myMap2["four"] = 4
 	myMap2["five"] = 5

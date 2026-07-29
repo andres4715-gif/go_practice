@@ -1,6 +1,6 @@
 package contratar
 
-import "fmt"		
+import "fmt"
 
 func Contratar() {
 	fmt.Println("✅ Contratando!!!")

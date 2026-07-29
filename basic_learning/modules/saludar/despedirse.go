@@ -1,6 +1,6 @@
 package saludar
 
-import "fmt"	
+import "fmt"
 
 func Adios() {
 	fmt.Println("👋 good bye!!!")

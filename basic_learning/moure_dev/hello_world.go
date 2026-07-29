@@ -31,7 +31,7 @@ func main() {
 	type employee struct {
 		name string
 		age  int
-		id string
+		id   string
 	}
 
 	fmt.Println("The name is: ", myString)
@@ -67,7 +67,7 @@ func main() {
 		fmt.Println("The function returned true")
 	}
 
-	var myEmployee employee = employee{"Liliana", 44, "123456"}	
+	var myEmployee employee = employee{"Liliana", 44, "123456"}
 	fmt.Println("The employee name is: ", myEmployee.name)
 	fmt.Println("The employee age is: ", myEmployee.age)
 	fmt.Println("The employee id is: ", myEmployee.id)

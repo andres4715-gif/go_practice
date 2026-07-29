@@ -13,7 +13,7 @@ func gettingData(pNumber *int) int {
 func savings(pMySavings *int) {
 	*pMySavings = *pMySavings - 1000
 	fmt.Println("💥 The new value is: ", *pMySavings)
-} 
+}
 
 func main() {
 	initialData := 2000
@@ -21,5 +21,5 @@ func main() {
 
 	savings(&MyData)
 
-	fmt.Println("🚀 The int value is: ", MyData) 
+	fmt.Println("🚀 The int value is: ", MyData)
 }

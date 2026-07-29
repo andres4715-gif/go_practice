@@ -11,6 +11,6 @@ func MiFuncion() {
 }
 
 func main() {
-fmt.Println("Imprimiendo desde main")
+	fmt.Println("Imprimiendo desde main")
 	MiFuncion()
 }

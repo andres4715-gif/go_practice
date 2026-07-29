@@ -2,7 +2,7 @@ package main
 
 import (
 	"myProject/basic_learning/strings/comparando_cadenas/cadenas"
-) 
+)
 
 func main() {
 	cadenas.ComparandoCadenas()

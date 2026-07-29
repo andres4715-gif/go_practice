@@ -40,9 +40,9 @@ func datosCasa(ciudad string, departamento string, precio int64, tipo string) (s
 	}
 
 	myCasa := casa{
-		precio:       precio,
 		ciudad:       ciudad,
 		departamento: departamento,
+		precio:       precio,
 		tipo:         tipo,
 	}
 	return ciudad, myCasa, nil

@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-
 func main() {
 
 	fmt.Println("---------- For basico -----------")
@@ -44,11 +43,11 @@ func main() {
 	}
 
 	fmt.Println("---------- Recoriendo un map ----------- -----------")
-	myMap2 := map[string]int {
-		"one": 1,
-		"two": 2,
+	myMap2 := map[string]int{
+		"one":   1,
+		"two":   2,
 		"three": 3,
-	} 
+	}
 	for k, v := range myMap2 {
 		fmt.Println("El numero para el key: ", k, " es: ", v)
 	}
