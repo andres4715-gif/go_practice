@@ -7,15 +7,15 @@ func main() {
 	nacionalidad := "Colombia"
 
 	if edad >= 18 {
-		fmt.Println("Es mayor de edad")
+		fmt.Println("✅ Permitido el acceso")
 	} else {
-		fmt.Println("Es menor de edad")
+		fmt.Println("❌ Negado el acceso")
 	}
 
 	if edad >= 18 && nacionalidad == "Colombia" {
-		fmt.Println("Es colombiano y mayor de edad")
+		fmt.Println("✅ Es colombiano y mayor de edad -> Permitido el acceso")
 	} else if edad < 18 && nacionalidad != "Colombia" {
-		fmt.Println("No es colombiano y menor de edad")
+		fmt.Println("❌ No es colombiano y menor de edad -> Negado el acceso")
 	} else {
 		fmt.Println("Es del pais: ", nacionalidad, " y tiene ", edad, " años")
 	}
