@@ -5,7 +5,7 @@ import (
 	"log"
 )
 
-func dividir(a, b int) (result int, err error) {
+func dividir(a int , b int) (result int, err error) {
 	if b == 0 {
 		err = fmt.Errorf("The dividend is %d and the divisor value is %d ", a, b)
 		return 0, err
