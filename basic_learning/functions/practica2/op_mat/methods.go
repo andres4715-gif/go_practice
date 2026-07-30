@@ -1,24 +1,24 @@
 package op_mat
 
-func Suma(a, b int) int {
+func Add(a, b int) int {
 	return a + b
 }
 
-func Resta(a, b int) int {
+func Subtraction(a, b int) int {
 	return a - b
 }
 
-func Multiplicacion(a, b int) int {
+func Times(a, b int) int {
 	return a * b
 }
 
-func Division(a, b int) int {
+func DividedBy(a, b int) int {
 	return a / b
 }
 
-func SumandoVariosNumeros(numeros ...int) int {
+func TotalAddition(numbers ...int) int { // <- it applies when you have no idea how many numbers are coming in
 	total := 0
-	for _, num := range numeros {
+	for _, num := range numbers {
 		total += num
 	}
 	return total

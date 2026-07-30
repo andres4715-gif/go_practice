@@ -7,16 +7,16 @@ import (
 
 func main() {
 	// 2. Usamos el nombre del nuevo paquete
-	totalSuma := op_mat.Suma(30, 90)
-	totalRest := op_mat.Resta(90, 30)
-	totalMultiplicacion := op_mat.Multiplicacion(10, 2)
-	totalDivision := op_mat.Division(10, 2)
-	sumandoVariosNumeros := op_mat.SumandoVariosNumeros(10, 20, 30)
+	totalAddition := op_mat.Add(30, 90)
+	totalSubtraction := op_mat.Subtraction(90, 30)
+	totalTimes := op_mat.Times(10, 2)
+	totalDivided := op_mat.DividedBy(10, 2)
+	total := op_mat.TotalAddition(10, 20, 30, 5, 2, 2, 1)
 
 	// Print
-	fmt.Println("Total suma es: ", totalSuma)
-	fmt.Println("Total resta es: ", totalRest)
-	fmt.Println("Total multiplicacion es: ", totalMultiplicacion)
-	fmt.Println("Total division es: ", totalDivision)
-	fmt.Println("Total suma varios numeros es: ", sumandoVariosNumeros)
+	fmt.Println("Total suma es: ", totalAddition)
+	fmt.Println("Total resta es: ", totalSubtraction)
+	fmt.Println("Total multiplicacion es: ", totalTimes)
+	fmt.Println("Total division es: ", totalDivided)
+	fmt.Println("Total suma varios numeros es: ", total)
 }
