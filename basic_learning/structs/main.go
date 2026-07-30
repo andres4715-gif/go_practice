@@ -2,21 +2,20 @@ package main
 
 import (
 	"fmt"
-	"myProject/basic_learning/structs/ejercicio1/persona"
+	"myProject/basic_learning/structs/example1/user"
 )
 
 func main() {
-	p1 := persona.Humano{Nombre: "Andres", Edad: 44, Ciudad: "Medellin"}
-	p2 := persona.Humano{Nombre: "Lilina", Edad: 45, Ciudad: "Itagui"}
+	Human1 := user.Human{Name: "Andres", Age: 44, City: "Medellin"}
+	Human2 := user.Human{Name: "Liliana", Age: 45, City: "Itagui"}
 
-	fmt.Println("---------- Persona 1 ----------")
-	fmt.Println(p1.Nombre)
-	fmt.Println(p1.Edad)
-	fmt.Println(p1.Ciudad)
+	fmt.Println("---------- Human 1 ----------")
+	fmt.Println(Human1.Name)
+	fmt.Println(Human1.Age)
+	fmt.Println(Human1.City)
 
-	fmt.Println("---------- Persona 2 ----------")
-	fmt.Println(p2.Nombre)
-	fmt.Println(p2.Edad)
-	fmt.Println(p2.Ciudad)
-
+	fmt.Println("---------- Human 2 ----------")
+	fmt.Println(Human2.Name)
+	fmt.Println(Human2.Age)
+	fmt.Println(Human2.City)
 }
