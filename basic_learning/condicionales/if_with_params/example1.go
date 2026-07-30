@@ -6,7 +6,7 @@ import (
 
 func main() {
 	fmt.Println("😎 Using if with a short declaration")
-	if total, err := divide(100, 0); err != nil {
+	if total, err := divide(100, 10); err != nil {
 		fmt.Println("Error:", err)
 	} else {
 		fmt.Println("Divide result is", total)
