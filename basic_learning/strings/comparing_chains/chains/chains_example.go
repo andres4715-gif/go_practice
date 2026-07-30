@@ -1,4 +1,4 @@
-package cadenas
+package chains
 
 import (
 	"fmt"
@@ -9,38 +9,39 @@ import (
 	"golang.org/x/text/language"
 )
 
-func ComparandoCadenas() {
-	fmt.Println(strings.Compare("a", "a"))
+func ComparingChains() {
+	fmt.Println(strings.Compare("a", "a")) // When the compared strings are equal the output is: 0
+	fmt.Println(strings.Compare("a", "b")) // When the compared strings are not equal the output is: -1
 }
-func ConteoSubCadenas() {
-	data := "texto"
-	dato := strings.Count("cadena de texto", data)
-	fmt.Println("El dato: ", data, "se encuentra", dato, "en el texto suministrado")
+func SubstringCount() {
+	data := "run"
+	dataToFind := strings.Count("run the example to run the test suite", data)
+	fmt.Println("Word: ", data, "is present", dataToFind, "times on the provided sentences")
 }
 
-func ConteoSubCadenasConLetra() {
-	letra := "a"
-	cadenaDeTexto := "andres"
+func CountSubStringWithSpecificLetter() {
+	word := "a"
+	textChain := "have a good day"
 
-	caracteres := utf8.RuneCountInString(cadenaDeTexto)
-	fmt.Println("El texto suministrado tiene", caracteres, "caracteres")
-	dato := strings.Count(cadenaDeTexto, letra)
+	characters := utf8.RuneCountInString(textChain)
+	fmt.Println("The provided text has", characters, "characters")
+	data := strings.Count(textChain, word)
 
-	if dato > 1 {
-		fmt.Println("La letra:", letra, ", se encuentra", dato, " veces en el texto suministrado")
+	if data > 1 {
+		fmt.Println("Word:", word, ", is present", data, " times in the provided text")
 	} else {
-		fmt.Println("La letra:", letra, ", se encuentra", dato, " vez en el texto suministrado")
+		fmt.Println("Word:", word, ", is present", data, " times in the provided text")
 	}
 }
 
-func ContienePalabra() {
-	checkWordExists := strings.Contains("la vida loca", "muerte")
-	fmt.Println("La palabra existe en el texto:", checkWordExists)
+func ContainsWord() {
+	checkWordExists := strings.Contains("if you laugh you have fun", "laugh")
+	fmt.Println("The sentence contains a specific word:", checkWordExists)
 }
 
-func DondeEstaLaPalabra() {
-	posicion := strings.Index("la vida loca", "vida")
-	fmt.Println("La palabra esta en la posicion:", posicion)
+func WordPosition() {
+	position := strings.Index("the crazy life", "life")
+	fmt.Println("The position is:", position)
 }
 
 func DondeEstaLaUltimaPalabraDeUnaCadena() {
