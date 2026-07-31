@@ -9,6 +9,6 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-git add automatic_push_gh.sh
+git add -A
 git commit -m "$1"
 git push origin "${CURRENT_BRANCH}"
