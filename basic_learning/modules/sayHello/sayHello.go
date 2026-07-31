@@ -1,7 +1,7 @@
-package saludar
+package sayHello
 
 import "fmt"
 
-func Hola() {
+func Hi() {
 	fmt.Println("👋 hello!!!")
 }

@@ -2,16 +2,16 @@ package main
 
 import (
 	"github.com/sirupsen/logrus"
-	"myProject/basic_learning/modules/contratar"
-	"myProject/basic_learning/modules/despedir"
-	"myProject/basic_learning/modules/saludar"
+	"myProject/basic_learning/modules/hire"
+	"myProject/basic_learning/modules/fire"
+	"myProject/basic_learning/modules/sayHello"
 )
 
 func main() {
-	saludar.Hola()
-	saludar.Adios()
-	contratar.Contratar()
-	despedir.Despedir()
+	sayHello.Hi()
+	sayHello.GodBy()
+	hire.Hire()
+	fire.Fire()
 
 	logger := logrus.New()
 

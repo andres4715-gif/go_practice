@@ -1,7 +1,7 @@
-package saludar
+package sayHello
 
 import "fmt"
 
-func Adios() {
+func GodBy() {
 	fmt.Println("👋 good bye!!!")
 }
