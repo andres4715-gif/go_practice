@@ -3,13 +3,12 @@ package main
 import "fmt"
 
 func main() {
-
-	fmt.Println("---------- For basico -----------")
+	fmt.Println("---------- For basic -----------")
 	for i := 0; i < 10; i++ {
 		fmt.Println(i)
 	}
 
-	fmt.Println("---------- For con break  -----------")
+	fmt.Println("---------- For with break  -----------")
 	for i := 0; i < 10; i++ {
 		if i == 5 {
 			break
@@ -17,7 +16,7 @@ func main() {
 		fmt.Println(i)
 	}
 
-	fmt.Println("---------- For con continue -----------")
+	fmt.Println("---------- For with continue -----------")
 	for i := 0; i < 10; i++ {
 		if i == 5 {
 			continue
@@ -42,13 +41,13 @@ func main() {
 		}
 	}
 
-	fmt.Println("---------- Recoriendo un map ----------- -----------")
+	fmt.Println("---------- traverse a map -----------")
 	myMap2 := map[string]int{
 		"one":   1,
 		"two":   2,
 		"three": 3,
 	}
 	for k, v := range myMap2 {
-		fmt.Println("El numero para el key: ", k, " es: ", v)
+		fmt.Println("The key value: ", k, " is: ", v)
 	}
 }
