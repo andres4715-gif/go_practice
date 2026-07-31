@@ -3,20 +3,20 @@ package main
 import "fmt"
 import "os"
 
-func main() {
-	contenido, err := leyendoArchivo("prueba.txt")
+func loadingFile(fileName string) ([]byte, error) {
+	text, err := os.ReadFile(fileName)
 	if err != nil {
-		fmt.Println("Error leyendo el archivo: ", err)
-		return
-	}
-	fmt.Println("El contenido del archivo es: ", string(contenido)) // Se debe convertir a string por que es un byte
-}
-
-func leyendoArchivo(archivoName string) ([]byte, error) {
-	texto, err := os.ReadFile(archivoName)
-	if err != nil {
-		fmt.Println("Error leyendo el archivo: ", err)
+		fmt.Println("Error loading file: ", err)
 		return nil, err
 	}
-	return texto, nil
+	return text, nil
+}
+
+func main() {
+	content, err := loadingFile("data.txt")
+	if err != nil {
+		fmt.Println("Error loading file ", err)
+		return
+	}
+	fmt.Println("The file content is", string(content))
 }
