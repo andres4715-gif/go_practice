@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	// Forma 1 de declarar un map
+	// Form 1 for map declaration
 	var myMap = map[string]int{
 		"one":   1,
 		"two":   2,
@@ -14,23 +14,23 @@ func main() {
 	myMap["four"] = 4
 	fmt.Println(myMap["four"])
 
-	// Forma 2 de declarar un map
+	// Forma 2 for map declaration
 	myMap = make(map[string]int)
 	myMap["one"] = 1
 	myMap["two"] = 2
 	myMap["three"] = 3
 	fmt.Println(myMap["one"])
 
-	// Como se edita un valor de un map
+	// How to edit a map value
 	myMap["three"] = 89
 	fmt.Println(myMap["three"])
 
-	// Como se elimina un valor de un map
-	fmt.Print("----- Eliminando un valor de un map -----\n")
-	delete(myMap, "three") // El valor de three fue eliminado y ya no se puede acceder
+	// How to delete a map value
+	fmt.Print("----- Removing a map value -----\n")
+	delete(myMap, "three") // The value of three was removed an it is not available
 	fmt.Println(myMap)
 
-	// iterar sobre un mapa:
+	// Map iteration
 	var myMap2 = make(map[string]int)
 	myMap2["four"] = 4
 	myMap2["five"] = 5
@@ -38,10 +38,10 @@ func main() {
 	myMap2["seven"] = 7
 	myMap2["eight"] = 8
 
-	fmt.Print("----- Map a trabajar -----\n")
+	fmt.Print("----- Map to work on -----\n")
 	fmt.Println(myMap2)
 
-	// Como se itera en el map
+	// Map iteration v2
 	for _, value := range myMap2 {
 		fmt.Print(value)
 	}
