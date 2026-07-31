@@ -1,7 +1,7 @@
 package main
 
 /*
-Puntero: Variable que almacena la direccion de memoria de otra variable.
+Pointer: A Variable that stores the memory address of another variable
 */
 
 import "fmt"
