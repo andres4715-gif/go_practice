@@ -5,9 +5,9 @@ import (
 	"log"
 )
 
-func dividir(a int, b int) (result int, err error) {
+func dividedBy(a, b int) (result int, err error) {
 	if b == 0 {
-		err = fmt.Errorf("The dividend is %d and the divisor value is %d ", a, b)
+		err = fmt.Errorf("The divided is %d and the divisor value is %d ", a, b)
 		return 0, err
 	}
 	result = a / b
@@ -15,10 +15,10 @@ func dividir(a int, b int) (result int, err error) {
 }
 
 func main() {
-	dividend := 100
+	divided := 100
 	divisor := 10
 
-	result, err := dividir(dividend, divisor)
+	result, err := dividedBy(divided, divisor)
 	if err != nil {
 		log.Fatalf("🚨 No valid operation: %s", err)
 	}
