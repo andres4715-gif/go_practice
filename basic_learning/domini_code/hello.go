@@ -19,7 +19,7 @@ func main() {
 		RA = 89.988
 	)
 
-	// Constantes the expresion
+	// Expression constants
 	const data = PI + RA
 
 	// Print:
@@ -27,19 +27,19 @@ func main() {
 	fmt.Println("The number of PI: ", PI)
 	fmt.Println("Total of data: ", data)
 
-	// Asignar una variable a otra de otro tipo de string a float64:
+	// Assign a variable to another type from string to float 
 	var age string = "44.4"
 	var finalAge, _ = strconv.ParseFloat(age, 64)
 	fmt.Println("The final age is: ", finalAge)
 	fmt.Println("The typeOf is: ", reflect.TypeOf(finalAge))
 
-	// Asignar una variable a otra de otro tipo cuando son numeros:
+	// Assigning one variable to another of a different type when they are numbers:
 	var ageFloat float64 = 44.4
 	var finalAge2 = int(ageFloat)
 	fmt.Println("The final data is: ", ageFloat)
 	fmt.Println("The typeOf data is: ", reflect.TypeOf(finalAge2))
 
-	// Operadores logicos y relacionales
+	// Logical and relational operators
 	var a int = 10
 	var b int = 20
 
@@ -47,14 +47,14 @@ func main() {
 	fmt.Println(a != b)
 	fmt.Println(a > b)
 	fmt.Println(a < b)
-	// operadores de comparacion
+	// comparison operators
 	fmt.Println(a <= b)
 	fmt.Println(a >= b)
 	/*
-		Diferencia clave: tamaño fijo vs dinámico.
-		Array ([3]string): tamaño fijo, parte del tipo. [3]string y [4]string son tipos distintos, no puedes cambiar el tamaño.
-		Slice ([]string): tamaño dinámico, puedes usar append para agregar elementos y crece. Por dentro, un slice es un array + referencia (puntero, len, cap).
-		En la práctica casi siempre usas slices; arrays se usan poco.
+		Key difference: fixed size vs dynamic.
+		Array ([3]string): fixed size, part of the type. [3]string and [4]string are different types, you cannot change the size.
+		Slice ([]string): dynamic size, you can use append to add elements and it grows. Internally, a slice is an array + reference (pointer, len, cap).
+		In practice you almost always use slices; arrays are rarely used.
 	*/
 
 	// Array
@@ -72,14 +72,14 @@ func main() {
 	fmt.Println(mySlice[0])
 	fmt.Println(mySlice)
 
-	// Agregar un nuevo elemento al slice
+	// Add a new element to the slice
 	fmt.Println("------------ slice  2 ------------")
 	mySlice2 := []string{}
 	mySlice2 = append(mySlice2, "Angular_V2", "svelte_V2", "react_V2", "vue_V2", "sonar_v3")
 	fmt.Println("The new slice is: ", mySlice2)
 	fmt.Println("The length of the new slice is: ", len(mySlice2))
 
-	// traer solo una parte de los elementos que estan en el slice:
+	// bring only a part of the elements that are in the slice:
 	fmt.Println("------------ slice  3 ------------")
 	fmt.Println("✅ mySlice: ", mySlice)
 	frameworklist := mySlice[1:3]
@@ -91,7 +91,7 @@ func main() {
 	frameworklist2 := mySlice3[1:]
 	fmt.Println("🧵 The fragmented list is: ", frameworklist2)
 
-	// Saber la cantidad de elementos del array o del slice
+	// Know the number of elements in the array or slice
 	fmt.Println("------------ len() ------------")
 	longitud := len(mySlice)
 	fmt.Printf("La longitud del slice es: %d\n", longitud)
@@ -130,7 +130,7 @@ func main() {
 
 	fmt.Println("------------ for example 3 ------------")
 	// for key, value := range collection {...}
-	for _, value := range mySlice2 { // Omitir el key se utiliza el underscore _
+	for _, value := range mySlice2 { // To omit the key, the underscore _ is used
 		fmt.Println("Printing a collection: ", value)
 	}
 }
