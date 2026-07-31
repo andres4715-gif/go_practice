@@ -2,24 +2,23 @@ package main
 
 import (
 	"fmt"
-	"myProject/basic_learning/slice/slicePractice/practica"
+	"myProject/basic_learning/slice/slicePractice/sliceInitialPractice"
 )
 
 func main() {
-	myArrayConDatos := []int{1, 2, 3, 4, 5} // Para ejemplos con array con datos
-	// myArrayVacio := []int{} // Para ejemplos con array sin datos
-	result, err := practica.RetornandoArrayConDatos(myArrayConDatos)
+	mySliceWithData := []int{1, 2, 3, 4, 5} // Example slice with data
+	result, err := sliceInitialPractice.ReturningSliceWithData(mySliceWithData)
 
 	if err != nil {
-		fmt.Println("Hubo un error:", err)
+		fmt.Println("We are getting an error:", err)
 	} else {
-		fmt.Println("El resultado con los datos agregados es: ", result)
+		fmt.Println("The final result is: ", result)
 	}
 
-	eliminandoDato, eliminandoDatoError := practica.RetornandoArrayConDatosEliminados(myArrayConDatos)
-	if eliminandoDatoError != nil {
-		fmt.Println("Hubo un error:", eliminandoDato)
+	resultDel, errDel := sliceInitialPractice.ReturningSliceWithDeleteData(mySliceWithData)
+	if errDel != nil {
+		fmt.Println("Delete error:", errDel)
 	} else {
-		fmt.Println("El resultado sin el dato eliminado es: ", eliminandoDato)
+		fmt.Println("The final Delete result: ", resultDel)
 	}
 }

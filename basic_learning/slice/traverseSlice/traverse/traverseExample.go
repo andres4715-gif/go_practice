@@ -1,8 +1,8 @@
-package recorrer
+package traverse
 
 import "fmt"
 
-func RecorrerSlice(data []int) {
+func TraverseSlice(data []int) {
 	for _, value := range data {
 		fmt.Println(value)
 	}
