@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	// Form 1 for map declaration
+	// Form v1 for map declaration
 	var myMap = map[string]int{
 		"one":   1,
 		"two":   2,
@@ -14,7 +14,7 @@ func main() {
 	myMap["four"] = 4
 	fmt.Println(myMap["four"])
 
-	// Forma 2 for map declaration
+	// Form v2 for map declaration
 	myMap = make(map[string]int)
 	myMap["one"] = 1
 	myMap["two"] = 2
