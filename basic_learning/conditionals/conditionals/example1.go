@@ -6,12 +6,12 @@ import (
 )
 
 type GiftCard struct {
-	price        int
-	day          int
-	month        int
-	year         int
-	business     string
-	redeem      []string
+	price    int
+	day      int
+	month    int
+	year     int
+	business string
+	redeem   []string
 }
 
 func verifyGift(newGiftCard GiftCard) (bool, error) {
@@ -35,12 +35,12 @@ func verifyGift(newGiftCard GiftCard) (bool, error) {
 
 func main() {
 	myGiftCard := GiftCard{
-		price:        1000,
-		day:          17,
-		month:        2,
-		year:         2030,
-		business:     "Amazon",
-		redeem: []string{"Santa Fe", "Oviedo", "La Central"},
+		price:    1000,
+		day:      17,
+		month:    2,
+		year:     2030,
+		business: "Amazon",
+		redeem:   []string{"Santa Fe", "Oviedo", "La Central"},
 	}
 
 	giftStatus, err := verifyGift(myGiftCard)

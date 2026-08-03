@@ -14,7 +14,7 @@ func main() {
 	fmt.Println("Print with a line break")
 	fmt.Println("Second line")
 
-	// 3. fmt.Printf - Prints with format like C 
+	// 3. fmt.Printf - Prints with format like C
 	myName := "Juan"
 	MyAge := 25
 	fmt.Printf("My name is %s and I am %d years old\n", myName, MyAge)
@@ -22,9 +22,9 @@ func main() {
 	// 4. More format examples
 	initialCost := 15500.75
 	fmt.Printf("The cost is: $%.2f dollars\n", initialCost)
-	fmt.Printf("The binary is: %b\n", 42)      // Binary
-	fmt.Printf("The Hexadecimal: %x\n", 255)    // Hexadecimal
-	fmt.Printf("The Percentage: %.1f%%\n", 85.5)   // Percentage
+	fmt.Printf("The binary is: %b\n", 42)        // Binary
+	fmt.Printf("The Hexadecimal: %x\n", 255)     // Hexadecimal
+	fmt.Printf("The Percentage: %.1f%%\n", 85.5) // Percentage
 
 	// 5. fmt.Sprintf - String format without printing
 	message := fmt.Sprintf("Use: %s, City: %s", "Ana", "Medellín")

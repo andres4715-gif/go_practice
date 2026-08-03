@@ -27,7 +27,7 @@ func main() {
 	fmt.Println("The number of PI: ", PI)
 	fmt.Println("Total of data: ", data)
 
-	// Assign a variable to another type from string to float 
+	// Assign a variable to another type from string to float
 	var age string = "44.4"
 	var finalAge, _ = strconv.ParseFloat(age, 64)
 	fmt.Println("The final age is: ", finalAge)

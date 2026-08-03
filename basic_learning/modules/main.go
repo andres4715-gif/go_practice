@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/sirupsen/logrus"
-	"myProject/basic_learning/modules/hire"
 	"myProject/basic_learning/modules/fire"
+	"myProject/basic_learning/modules/hire"
 	"myProject/basic_learning/modules/sayHello"
 )
 
