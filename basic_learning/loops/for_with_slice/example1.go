@@ -1,10 +1,8 @@
 package main
 
-
 import (
 	"fmt"
 )
-
 
 func contains(siblings []string, value string) bool {
 	for _, element := range siblings {
