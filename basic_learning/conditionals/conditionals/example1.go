@@ -43,10 +43,10 @@ func main() {
 		redeem:   []string{"Santa Fe", "Oviedo", "La Central"},
 	}
 
-	giftStatus, err := verifyGift(myGiftCard)
+	myGitStatus, err := verifyGift(myGiftCard)
 	if err != nil {
-		fmt.Println("Hubo un error:", err)
+		fmt.Println("Getting some Errors:", err)
 	}
 
-	fmt.Println("Puede reclamar el regalo? : ", giftStatus)
+	fmt.Println("Give the gift? : ", myGitStatus)
 }
