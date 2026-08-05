@@ -21,11 +21,11 @@ type house struct {
 
 func carData(model string, version string, brand string, year int64, price int64) (car, error) {
 	if model == "" || version == "" || brand == "" || year <= 0 || price <= 0 {
-		return car{}, fmt.Errorf("Missing required data or negative data")
+		return car{}, fmt.Errorf("Missing car data required data or negative data")
 	}
 	// If everything is ok "make" our car with data
 	newCar := car{
-		Model: model + " " + version, // We take the opportunity to combine these two
+		Model: model + " " + version, // We take the opportunity to combine these two (model and version)
 		Brand: brand,
 		Year:  year,
 		Price: price,
@@ -34,9 +34,9 @@ func carData(model string, version string, brand string, year int64, price int64
 	return newCar, nil
 }
 
-func houseData(city string, department string, price int64, myType string) (string, house, error) {
-	if city == "" || price <= 0 || myType == "" || myType != "House" && myType != "apartment" {
-		return city, house{}, fmt.Errorf("Missing mandatory data or some errors")
+func houseData(city string, department string, price int64, myType string) (house, error) {
+	if city == "" || department == "" || price <= 0 || myType == "" || myType != "house" && myType != "apartment" {
+		return house{}, fmt.Errorf("Missing house mandatory data or some errors")
 	}
 
 	myHouse := house{
@@ -45,7 +45,7 @@ func houseData(city string, department string, price int64, myType string) (stri
 		Price:      price,
 		Type:       myType,
 	}
-	return city, myHouse, nil
+	return myHouse, nil
 }
 
 func main() {
@@ -55,7 +55,7 @@ func main() {
 	}
 	fmt.Printf("Register car: %s %s, Price: $%v\n", myCar.Brand, myCar.Model, myCar.Price)
 
-	_, myNewHouse, err := houseData("Caldas", "Antioquia", 1000, "apartamento") // <--- APlicando el concepto del agujero negro osea la (_)
+	myNewHouse, err := houseData("Caldas", "Antioquia", 1000, "apartment")
 	if err != nil {
 		log.Fatalf("Is not possible to register %s", err)
 	}
