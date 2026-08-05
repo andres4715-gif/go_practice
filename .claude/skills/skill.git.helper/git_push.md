@@ -17,7 +17,7 @@ When the user says **`git_push`**, push the changes to the repository following 
 
 2. **Stage all changes**:
    ```bash
-   git add .
+   git add -A
    ```
 
 3. **Find the current branch**:
