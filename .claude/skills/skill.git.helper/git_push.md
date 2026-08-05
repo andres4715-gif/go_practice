@@ -9,6 +9,8 @@ When the user says **`git_push`**, push the changes to the repository following 
 
 ## Steps
 
+0. Important: the commit message should be in English 
+
 1. **Check what changed** so you can write a good commit message:
    ```bash
    git status
@@ -28,13 +30,14 @@ When the user says **`git_push`**, push the changes to the repository following 
 4. **Commit** with a message that matches the actual changes (not generic).
    The message should describe *what* changed, short and clear:
    ```bash
-   git commit -m "<message matching the changes>"
+   git commit -s -m "<message matching the changes>"
    ```
 
 5. **Push** to `origin` on the current branch:
    ```bash
    git push origin <branch-name>
    ```
+6. Once the process is finished you should show up the commit message as: "The commit message is: "
 
 ## Rules for the commit message
 
