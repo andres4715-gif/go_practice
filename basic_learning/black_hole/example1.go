@@ -24,14 +24,14 @@ func carDataConstructor(model string, version string, brand string, year int64, 
 		return car{}, fmt.Errorf("Missing car data required data or negative data")
 	}
 	// If everything is ok "make" our car with data
-	newCar := car{
+	NewCar := car{
 		Model: model + " " + version, // We take the opportunity to combine these two (model and version)
 		Brand: brand,
 		Year:  year,
 		Price: price,
 	}
 
-	return newCar, nil
+	return NewCar, nil
 }
 
 func houseDataConstructor(city string, department string, price int64, myType string) (house, error) {
@@ -39,21 +39,23 @@ func houseDataConstructor(city string, department string, price int64, myType st
 		return house{}, fmt.Errorf("Missing house mandatory data or some errors")
 	}
 
-	myHouse := house{
+	NewHouse := house{
 		City:       city,
 		Department: department,
 		Price:      price,
 		Type:       myType,
 	}
-	return myHouse, nil
+	return NewHouse, nil
 }
 
+// Check in this function if you don't use the variable is possible to use _ 
 func main() {
-	myCar, err := carDataConstructor("3", "Gran turing", "Mazda", 2017, 30000)
+    _, err := carDataConstructor("3", "Gran turing", "Mazda", 2017, 30000)
 	if err != nil {
 		log.Fatalf("🚨 No valid operation: %s", err)
 	}
-	fmt.Printf("Register car: %s %s, Price: $%v\n", myCar.Brand, myCar.Model, myCar.Price)
+	fmt.Println("👷🏻‍♂️ The car is ready")
+	// fmt.Printf("Register car: %s %s, Price: $%v\n", myCar.Brand, myCar.Model, myCar.Price)
 
 	myNewHouse, err := houseDataConstructor("Caldas", "Antioquia", 1000, "apartment")
 	if err != nil {
