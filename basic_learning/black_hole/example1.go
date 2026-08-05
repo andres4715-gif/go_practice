@@ -5,59 +5,59 @@ import (
 	"log"
 )
 
-type carro struct {
-	Modelo string
-	Marca  string
-	Anio   int64
-	Precio int64
+type car struct {
+	Model string
+	Brand string
+	Year  int64
+	Price int64
 }
 
-type casa struct {
-	ciudad       string
-	departamento string
-	precio       int64
-	tipo         string
+type house struct {
+	City       string
+	Department string
+	Price      int64
+	Type       string
 }
 
-func datosCarro(modelo string, version string, marca string, anio int64, precio int64) (carro, error) {
-	if modelo == "" || version == "" || marca == "" || anio <= 0 || precio <= 0 {
-		return carro{}, fmt.Errorf("faltan datos obligatorios o hay valores negativos")
+func carData(model string, version string, brand string, year int64, price int64) (car, error) {
+	if model == "" || version == "" || brand == "" || year <= 0 || price <= 0 {
+		return car{}, fmt.Errorf("Missing required data or negative data")
 	}
-	// Si todo está bien, "armamos" nuestro carrito con los datos
-	nuevoCarro := carro{
-		Modelo: modelo + " " + version, // Aprovechamos para unir estos dos
-		Marca:  marca,
-		Anio:   anio,
-		Precio: precio,
+	// If everything is ok "make" our car with data
+	newCar := car{
+		Model: model + " " + version, // We take the opportunity to combine these two
+		Brand: brand,
+		Year:  year,
+		Price: price,
 	}
 
-	return nuevoCarro, nil
+	return newCar, nil
 }
 
-func datosCasa(ciudad string, departamento string, precio int64, tipo string) (string, casa, error) {
-	if ciudad == "" || precio <= 0 || tipo == "" || tipo != "casa" && tipo != "apartamento" {
-		return ciudad, casa{}, fmt.Errorf("Faltan datos mandatorios o estan erroneos")
+func houseData(city string, department string, price int64, myType string) (string, house, error) {
+	if city == "" || price <= 0 || myType == "" || myType != "House" && myType != "apartment" {
+		return city, house{}, fmt.Errorf("Missing mandatory data or some errors")
 	}
 
-	myCasa := casa{
-		ciudad:       ciudad,
-		departamento: departamento,
-		precio:       precio,
-		tipo:         tipo,
+	myHouse := house{
+		City:       city,
+		Department: department,
+		Price:      price,
+		Type:       myType,
 	}
-	return ciudad, myCasa, nil
+	return city, myHouse, nil
 }
 
 func main() {
-	myCarro, err := datosCarro("3", "Gran turing", "Mazda", 2017, 30000)
+	myCar, err := carData("3", "Gran turing", "Mazda", 2017, 30000)
 	if err != nil {
 		log.Fatalf("🚨 No valid operation: %s", err)
 	}
-	fmt.Printf("Carro registrado: %s %s, Precio: $%v\n", myCarro.Marca, myCarro.Modelo, myCarro.Precio)
+	fmt.Printf("Register car: %s %s, Price: $%v\n", myCar.Brand, myCar.Model, myCar.Price)
 
-	_, myNuevaCasaPepito, err := datosCasa("Caldas", "Antioquia", 1000, "apartamento") // <--- APlicando el concepto del agujero negro osea la (_)
+	_, myNewHouse, err := houseData("Caldas", "Antioquia", 1000, "apartamento") // <--- APlicando el concepto del agujero negro osea la (_)
 	if err != nil {
-		log.Fatalf("No es posible registrar la casa %s", err)
+		log.Fatalf("Is not possible to register %s", err)
 	}
-	fmt.Printf("%s registrada en %s departamento de %s con precio de $%d \n", myNuevaCasaPepito.tipo, myNuevaCasaPepito.ciudad, myNuevaCasaPepito.departamento, myNuevaCasaPepito.precio)
+	fmt.Printf("%s registered in %s department of %s with price $%d \n", myNewHouse.Type, myNewHouse.City, myNewHouse.Department, myNewHouse.Price)
 }
