@@ -4,7 +4,7 @@ Applies when writing or editing code and tests in this repository.
 
 ## Project style
 
-- Code comments, variable names, and explanations are in **Spanish**, simple and didactic.
+- Code comments, variable names, and explanations are in **Spanish**, simple, short and didactic.
 - Run `gofmt -w .` before finishing. Code must pass `go build ./...` and `go vet ./...`.
 
 ## Test framework
