@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A personal **Go learning playground**. It is not an application — it's a collection of small, independent example programs organized by topic under `basic_learning/`. The owner is learning Go in Spanish, so code comments, variable names, and explanations are in Spanish. Match that language and the simple, didactic style when adding or editing examples.
+A personal **Go learning playground**. It is not an application — it's a collection of small, independent example programs organized by topic under `basic_learning/`, go code comments, variable names, and explanations are in English. Match that language and the simple, didactic style when adding or editing examples.
 
 ## Module layout
 
