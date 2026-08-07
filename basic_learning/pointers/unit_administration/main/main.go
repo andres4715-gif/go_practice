@@ -11,6 +11,7 @@ func main() {
 		ParkingLots:       []string{"98d", "77b", "98u", "69h"},
 		CarLicensePlates:  []string{"ABC-123", "EFG-456"},
 		BikeLicensePlates: []string{"HIJ-789"},
+		Debt:              500,
 	}
 
 	// Calling the constructor = NewOwnerAccount()
@@ -25,6 +26,7 @@ func main() {
 		ParkingLots:       []string{"98d"},
 		CarLicensePlates:  []string{"ABC-123"},
 		BikeLicensePlates: []string{},
+		Debt:              5000,
 	})
 
 	a.AddOwner("user3", account.OwnerInfo{
@@ -35,6 +37,7 @@ func main() {
 		ParkingLots:       []string{"52d"},
 		CarLicensePlates:  []string{"ZFK-987"},
 		BikeLicensePlates: []string{},
+		Debt:              0,
 	})
 
 	// Printing list of users
