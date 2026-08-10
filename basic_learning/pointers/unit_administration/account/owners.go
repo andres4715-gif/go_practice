@@ -21,13 +21,22 @@ func (a *Account) AddOwner(ownerId string, info OwnerInfo) {
 func (a *Account) ListOwners() {
 	flag := 1
 	for userId, userInfo := range a.Owners {
-		fmt.Printf("%d - [%s] %s %s | Balance: %d | Debt: %d | HasDebt: %t\n",
-			flag, userId, userInfo.OwnerName, userInfo.OwnerLastName, userInfo.Balance, userInfo.Debt, userInfo.HasDebt())
-	flag = flag + 1	
+		fmt.Printf("%d - [%s] %s %s | Initial Balance: %d | Debt: %d | HasDebt: %t | Final Balance: %d\n",
+			flag, userId, userInfo.OwnerName, userInfo.OwnerLastName, userInfo.Balance, userInfo.Debt, userInfo.HasDebt(), userInfo.finalBalance())
+		flag = flag + 1
 	}
 }
 
 // HasDebt reports whether the given owner has any pending debt
 func (info OwnerInfo) HasDebt() bool {
 	return info.Debt > 0
+}
+
+func (info OwnerInfo) finalBalance() int {
+	newBalance := 0
+	if info.HasDebt() == true {
+		newBalance = info.Balance - info.Debt
+		return newBalance
+	}
+	return info.Balance
 }
