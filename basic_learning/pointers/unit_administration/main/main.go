@@ -5,7 +5,7 @@ import "myProject/basic_learning/pointers/unit_administration/account"
 func main() {
 	userInfo := account.OwnerInfo{
 		OwnerName:         "Andres",
-		OwnerLastName:     "Palomino",
+		OwnerLastName:     "Palomin",
 		Apartments:        []string{"454", "987"},
 		Balance:           90000,
 		ParkingLots:       []string{"98d", "77b", "98u", "69h"},
@@ -33,7 +33,7 @@ func main() {
 		OwnerName:         "Daniel",
 		OwnerLastName:     "Rosales",
 		Apartments:        []string{"875"},
-		Balance:           700000,
+		Balance:           70000,
 		ParkingLots:       []string{"52d"},
 		CarLicensePlates:  []string{"ZFK-987"},
 		BikeLicensePlates: []string{},

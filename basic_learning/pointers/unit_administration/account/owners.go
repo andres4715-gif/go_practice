@@ -19,9 +19,11 @@ func (a *Account) AddOwner(ownerId string, info OwnerInfo) {
 
 // ListOwners prints a summary of every owner in the account
 func (a *Account) ListOwners() {
-	for id, info := range a.Owners {
-		fmt.Printf("- [%s] %s %s | Balance: %d | Debt: %d | HasDebt: %t\n",
-			id, info.OwnerName, info.OwnerLastName, info.Balance, info.Debt, info.HasDebt())
+	flag := 1
+	for userId, userInfo := range a.Owners {
+		fmt.Printf("%d - [%s] %s %s | Balance: %d | Debt: %d | HasDebt: %t\n",
+			flag, userId, userInfo.OwnerName, userInfo.OwnerLastName, userInfo.Balance, userInfo.Debt, userInfo.HasDebt())
+	flag = flag + 1	
 	}
 }
 
