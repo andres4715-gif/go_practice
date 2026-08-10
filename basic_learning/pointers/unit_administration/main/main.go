@@ -3,7 +3,7 @@ package main
 import "myProject/basic_learning/pointers/unit_administration/account"
 
 func main() {
-	info := account.OwnerInfo{
+	userInfo := account.OwnerInfo{
 		OwnerName:         "Andres",
 		OwnerLastName:     "Palomino",
 		Apartments:        []string{"454", "987"},
@@ -15,7 +15,7 @@ func main() {
 	}
 
 	// Calling the constructor = NewOwnerAccount()
-	a := account.NewOwnerAccount("user1", info)
+	a := account.NewOwnerAccount("user1", userInfo)
 
 	// Adding a new Owner from AddOwner
 	a.AddOwner("user2", account.OwnerInfo{
