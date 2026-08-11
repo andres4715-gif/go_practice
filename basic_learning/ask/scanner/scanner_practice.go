@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
+	scanner := bufio.NewScanner(os.Stdin) // This is to type a response
 
 	apartmentID := ask(scanner, "Apartment id: ")
 	name := ask(scanner, "Person name: ")
