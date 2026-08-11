@@ -3,7 +3,7 @@ package account
 import "fmt"
 
 type Account struct {
-	Owner string
+	Owner   string
 	Balance int
 }
 
@@ -11,7 +11,7 @@ func NewAccount(owner string, initialBalance int) *Account {
 	fmt.Println("Client name:", owner)
 	fmt.Println("Client Current Balance:", initialBalance)
 	return &Account{
-		Owner: owner,
+		Owner:   owner,
 		Balance: initialBalance,
 	}
 }

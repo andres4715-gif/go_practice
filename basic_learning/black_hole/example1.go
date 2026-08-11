@@ -48,9 +48,9 @@ func houseDataConstructor(city string, department string, price int64, myType st
 	return NewHouse, nil
 }
 
-// Check in this function if you don't use the variable is possible to use _ 
+// Check in this function if you don't use the variable is possible to use _
 func main() {
-    _, err := carDataConstructor("3", "Gran turing", "Mazda", 2017, 30000)
+	_, err := carDataConstructor("3", "Gran turing", "Mazda", 2017, 30000)
 	if err != nil {
 		log.Fatalf("🚨 No valid operation: %s", err)
 	}
