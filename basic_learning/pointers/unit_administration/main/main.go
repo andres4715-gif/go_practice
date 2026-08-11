@@ -1,6 +1,9 @@
 package main
 
-import "myProject/basic_learning/pointers/unit_administration/account"
+import (
+	"fmt"
+	"myProject/basic_learning/pointers/unit_administration/account"
+)
 
 func main() {
 	userInfo := account.OwnerInfo{
@@ -33,12 +36,17 @@ func main() {
 		OwnerName:         "Daniel",
 		OwnerLastName:     "Rosales",
 		Apartments:        []string{"875"},
-		Balance:           70000,
+		Balance:           60000,
 		ParkingLots:       []string{"52d"},
 		CarLicensePlates:  []string{"ZFK-987"},
 		BikeLicensePlates: []string{},
 		Debt:              0,
 	})
+
+	// Renting the social room: only one owner can have it at a time.
+	fmt.Println(" ⏰ [user1] rents social room:", a.RentSocialRoom("user1")) // true  -> he rented it first
+	fmt.Println(" ⏰ [user2] rents social room:", a.RentSocialRoom("user2")) // false -> is already occupied today
+	fmt.Println(" ⏰ [user3] rents social room:", a.RentSocialRoom("user3")) // false -> is already occupied today
 
 	// Printing list of users
 	a.ListOwners()
